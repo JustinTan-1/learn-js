@@ -11,11 +11,36 @@
     <div id="output"></div>
   </body>
   <script>
+    //Adaptive textbox display
     const textBox = document.querySelector("#textBox");
     const output = document.querySelector("#output");
 
     textBox.addEventListener("keydown", (event) => {
       output.textContent = `You pressed "${event.key}".`;
     });
+
+    //addition
+    function add7(num) {
+      return num + 7;
+    }
+    //multiplication
+    function multiply(num1, num2) {
+      return num1 * num2;
+    }
+    //lower case everything but capitalize the first letter
+    function capitalize(string) {
+      string = string.toLowerCase();
+      let firstLetter = string.slice(0, 1);
+      let remainingString = string.slice(1);
+      return firstLetter.toUpperCase() + remainingString;
+    }
+    //last letter of a string
+    function lastLetter(string) {
+      return (lastLetter = string.slice(string.length - 1));
+    }
+    alert(add7(2));
+    alert(multiply(2, 4));
+    alert(capitalize("AsudhfkLHIASDFHUISUEHFksjdfSsdjshS"));
+    alert(lastLetter("amogus"));
   </script>
 </html>
