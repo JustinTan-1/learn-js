@@ -27,14 +27,14 @@
     function multiply(num1, num2) {
       return num1 * num2;
     }
-    //lower case everything but capitalize the first letter
+    //Utilize slice to take the first letter
     function capitalize(string) {
       string = string.toLowerCase();
       let firstLetter = string.slice(0, 1);
       let remainingString = string.slice(1);
       return firstLetter.toUpperCase() + remainingString;
     }
-    //last letter of a string
+    //take away one from length to get the last letter
     function lastLetter(string) {
       return (lastLetter = string.slice(string.length - 1));
     }
@@ -42,5 +42,19 @@
     alert(multiply(2, 4));
     alert(capitalize("AsudhfkLHIASDFHUISUEHFksjdfSsdjshS"));
     alert(lastLetter("amogus"));
+    //Leap Year function with nested if statements
+    const leapYears = function (year) {
+      let isLeapYear = false;
+      if (year % 4 === 0) {
+        isLeapYear = true;
+        if (year % 100 === 0) {
+          isLeapYear = false;
+          if (year % 400 === 0) {
+            isLeapYear = true;
+          }
+        }
+      }
+      return isLeapYear;
+    };
   </script>
 </html>
